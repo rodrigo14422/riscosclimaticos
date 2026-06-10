@@ -42,4 +42,63 @@
         </section>
 
         <section id="secao-checklist" aria-labelledby="titulo-checklist">
-            <h2 id="titulo-checklist">Guia Prático e Checklist de Preven
+            <h2 id="titulo-checklist">Guia Prático e Checklist de Prevenção</h2>
+            <p>Monitore sua propriedade e marque as ações preventivas já realizadas:</p>
+            
+            <ul class="lista-checklist">
+                <li>
+                    <label>
+                        <input type="checkbox" name="prevencao" value="maquinas">
+                        Manutenção de Máquinas: Verificação de acúmulo de palha em colhedoras.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="prevencao" value="aceiros">
+                        Aceiros e Barreiras: Faixas de terra limpas sem vegetação para bloquear chamas.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="prevencao" value="eletrica">
+                        Rede Elétrica: Inspeção de fios e conexões expostas em áreas secas.
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="prevencao" value="drones">
+                        Vigilância Tecnológica: Planejamento de monitoramento por drones em áreas críticas.
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <section id="secao-chatbot" aria-labelledby="titulo-chatbot">
+            <h2 id="titulo-chatbot">Assistente Virtual de Emergência</h2>
+            <p>Selecione uma dúvida ou situação de emergência para receber orientações imediatas:</p>
+            
+            <div id="interface-chat">
+                <div id="historico-chat">
+                    <p class="msg-bot">Olá! Sou o assistente do EcoAlerta. Como posso ajudar você a proteger o campo hoje?</p>
+                </div>
+                
+                <div id="botoes-interacao">
+                    <button type="button" class="btn-opcao" data-resposta="Fogo avistado! Ligue imediatamente para os Bombeiros (193) ou para a brigada do Sindicato Rural local. Afaste-se da direção do vento e proteja os animais.">Avistei um foco de incêndio. O que fazer?</button>
+                    <button type="button" class="btn-opcao" data-resposta="Os aceiros devem ter largura mínima equivalente a duas vezes e meia a altura da vegetação local (mínimo de 3 metros) e devem ser mantidos completamente limpos.">Como fazer um aceiro eficiente?</button>
+                    <button type="button" class="btn-opcao" data-resposta="Os incêndios rurais destroem a fauna e a flora, empobrecem o solo e geram fumaça que afeta a saúde nas cidades, além de encarecer os alimentos devido às quebras de safra.">Como a seca e o fogo afetam a cidade?</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Projeto Autoral - Concurso Agrinho 2026</p>
+            <p>Componente Curricular de Programação - Ensino Médio da Rede Pública do Paraná</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

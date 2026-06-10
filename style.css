@@ -23,4 +23,268 @@
    2. RESET GLOBAL (*) - Consistência entre Navegadores
    ========================================================================== */
 * {
-    margin
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografia limpa e moderna */
+}
+
+/* Base do Corpo */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+/* ==========================================================================
+   3. ESTILIZAÇÃO DOS COMPONENTES (UI/UX)
+   ========================================================================== */
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 40px var(--espacamento);
+    text-align: center;
+    border-bottom: 5px solid var(--cor-secundaria);
+    box-shadow: var(--sombra-suave);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container Principal */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 var(--espacamento);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento confortável entre seções */
+}
+
+/* Seções Gerais */
+section {
+    background-color: var(--cor-texto-claro);
+    padding: 30px;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-suave);
+    border-left: 5px solid var(--cor-primaria);
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+section > p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Formulário e Inputs (Seção Termômetro) */
+#formulario-clima {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-input label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.campo-input input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: var(--borda-raio);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.campo-input input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+/* Botões Estilizados */
+button {
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--borda-raio);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#btn-calcular {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    width: 100%;
+}
+
+#btn-calcular:hover {
+    background-color: #113f15;
+}
+
+#btn-calcular:active {
+    transform: scale(0.98);
+}
+
+/* Painel de Resultados / Mensagens de Erro */
+#painel-resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: var(--borda-raio);
+    animation: abrirSuave 0.3s ease;
+}
+
+/* Classes utilitárias que o JS controlará dinamicamente */
+.escondido {
+    display: none !important;
+}
+
+.erro-validacao {
+    background-color: var(--cor-erro-fundo);
+    border: 2px solid var(--cor-erro-texto);
+    color: var(--cor-erro-texto);
+    padding: 15px;
+    border-radius: var(--borda-raio);
+    font-weight: bold;
+}
+
+.alerta-sucesso {
+    background-color: #e8f5e9;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 15px;
+    border-radius: var(--borda-raio);
+}
+
+/* Lista de Checklist Interativo */
+.lista-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-checklist li label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.lista-checklist li label:hover {
+    background-color: #f0f4f1;
+}
+
+.lista-checklist input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-top: 5px;
+    accent-color: var(--cor-primaria); /* Cor do check combinando com o tema */
+}
+
+/* Chatbot de Emergência */
+#interface-chat {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--borda-raio);
+    overflow: hidden;
+}
+
+#historico-chat {
+    padding: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.msg-bot, .msg-usuario {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: var(--borda-raio);
+    max-width: 85%;
+    font-size: 0.95rem;
+}
+
+.msg-bot {
+    background-color: #eee;
+    color: var(--cor-texto-escuro);
+    border-top-left-radius: 0;
+}
+
+.msg-usuario {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    margin-left: auto;
+    border-top-right-radius: 0;
+}
+
+#botoes-interacao {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-opcao {
+    background-color: #ffffff;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.btn-opcao:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #999;
+    text-align: center;
+    padding: 20px var(--espacamento);
+    font-size: 0.85rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+/* Animação para surgimento de elementos */
+@keyframes abrirSuave {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

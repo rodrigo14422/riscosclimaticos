@@ -1,1 +1,26 @@
+/* ==========================================================================
+   1. CENTRAL DE VARIÁVEIS (:root) - Paleta Agro/Sustentabilidade & Contraste
+   ========================================================================== */
+:root {
+    /* Cores Principais */
+    --cor-primaria: #1b5e20;     /* Verde Fechado/Sustentável (Alta visibilidade e identidade Agro) */
+    --cor-secundaria: #e65100;   /* Laranja Alerta (Para representar risco de seca/fogo) */
+    --cor-fundo: #f5f7f6;        /* Cinza Claro Ecológico (Conforto visual, evita fadiga da tela branca) */
+    
+    /* Cores de Apoio e Texto */
+    --cor-texto-escuro: #212121; /* Grafite de Alto Contraste (Excelente para leitura de artigos) */
+    --cor-texto-claro: #ffffff;  /* Branco Puro (Para textos sobre fundos escuros) */
+    --cor-erro-fundo: #ffebee;   /* Fundo leve para avisos de validação do JS */
+    --cor-erro-texto: #c62828;   /* Texto vermelho escuro para erros visíveis */
+    
+    /* Espaçamentos e Bordas */
+    --espacamento: 20px;
+    --borda-raio: 8px;
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
+/* ==========================================================================
+   2. RESET GLOBAL (*) - Consistência entre Navegadores
+   ========================================================================== */
+* {
+    margin

@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAlerta - Monitoramento de Riscos Climáticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <h1>EcoAlerta Rural</h1>
+            <p>Conexão Campo-Cidade para a Prevenção de Secas e Incêndios</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="secao-termometro" aria-labelledby="titulo-termometro">
+            <h2 id="titulo-termometro">Termômetro de Risco Climático</h2>
+            <p>Insira os dados meteorológicos atuais da sua região para calcular o nível de risco de incêndio.</p>
+            
+            <form id="formulario-clima">
+                <div class="campo-input">
+                    <label for="input-temperatura">Temperatura Atual (°C):</label>
+                    <input type="number" id="input-temperatura" placeholder="Ex: 35" required>
+                </div>
+
+                <div class="campo-input">
+                    <label for="input-umidade">Umidade Relativa do Ar (%):</label>
+                    <input type="number" id="input-umidade" placeholder="Ex: 15" required>
+                </div>
+
+                <button type="submit" id="btn-calcular">Analisar Risco</button>
+            </form>
+
+            <article id="painel-resultado" class="escondido">
+                <h3>Resultado da Análise</h3>
+                <div id="mensagem-alerta"></div>
+            </article>
+        </section>
+
+        <section id="secao-checklist" aria-labelledby="titulo-checklist">
+            <h2 id="titulo-checklist">Guia Prático e Checklist de Preven
